@@ -1,12 +1,10 @@
-# python-samples
+# Project Title
 
-Useful Python Sample Codes
+One Paragraph of project description goes here
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-1. ldapclient.py
-Python-ldap implenetation for AD and LDAP. This is a Django authentication backend that authenticates against an LDAP service.
 
 ### Prerequisites
 
@@ -66,17 +64,17 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/akashtalole) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/akashtalole/python-samples/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Akash Talole** - *Initial work* - [akashtalole](https://github.com/akashtalole)
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/akashtalole/python-samples/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -88,6 +86,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Inspiration
 * etc
 
-## Documentation
-
-https://akashtalole.github.io/python-samples/
