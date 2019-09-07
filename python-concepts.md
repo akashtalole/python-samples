@@ -1,5 +1,18 @@
 ## Python Concepts
 
+# What is Python? Executive Summary
+- Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
+- Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. 
+- Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. 
+- Python supports modules and packages, which encourages program modularity and code reuse. 
+- The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+- Often, programmers fall in love with Python because of the increased productivity it provides. 
+- Since there is no compilation step, the edit-test-debug cycle is incredibly fast. 
+- Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an exception. When the program doesn't catch the exception, the interpreter prints a stack trace. 
+- A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. 
+- The debugger is written in Python itself, testifying to Python's introspective power. 
+- On the other hand, often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective.
+
 # Interpreter vs Compiler
 
 | Interpreter | Compiler |
@@ -310,5 +323,92 @@ helloWorldDictionary = dict(zip(helloWorld[0::2], helloWorld[1::2]))
 # Print out the result
 print(helloWorldDictionary)
 >> {'hello': 'world', '1': '2'}
+```
+
+24. How To Determine The Size Of Your List in Python?
+
+You can pass your list to the len() function to get the length of your list back.
+```
+# Pass `List` to `len()`
+List = [1,2,3,4,5]
+len(List)
+>> 5
+```
+
+25. What’s The Difference Between The Python append() and extend() Methods?
+
+```
+# Append [4,5] to `shortList`
+shortList.append([4, 5])
+
+# Use the `print()` method to show `shortList`
+print(shortList)
+
+# Extend `longerList` with [4,5]
+longerList.extend([4, 5])
+
+# Use the `print()` method to see `longerList`
+print(longerList)
+```
+
+26. How To Concatenate Lists in Python?
+
+To concatenate lists, you use the + operator. It will give you a new list that is the concatenation of your two lists without modifying the original ones.
+
+```
+# Concatenate `shortList` with `[4,5]`
+plusList = shortList + [4,5]
+
+#Use the `print()` method to see `plusList`
+print(plusList)
+>> [1, 2, 3, 4, 5]
+```
+
+27. How To Sort a List in Python?
+
+```
+# Use `sort()` on the `rooms` list
+rooms.sort()
+
+# Print out `rooms` to see the result
+print(rooms)
+
+# Now use the `sorted()` function on the `orders` list
+sorted(orders)
+
+# Print out orders
+print(orders)
+```
+
+28. How To Clone Or Copy A List in Python?
+
+There are a lot of ways of cloning or copying a list:
+
+- You can slice your original list and store it into a new variable: newList = oldList[:]
+- You can use the built-in list() function: newList = list(oldList)
+- You can use the copy library:
+- With the copy() method: newList = copy.copy(oldList)
+- If your list contains objects and you want to copy those as well, you can use copy.deepcopy(): copy.deepcopy(oldList)
+
+```
+# Copy the grocery list by slicing and store it in the `newGroceries` variable
+newGroceries = groceries[:]
+# Copy the grocery list with the `list()` function and store it in a `groceriesForFriends` variable
+groceriesForFriends = list(groceries)
+# Import the copy library
+import copy as c
+# Create a `groceriesForFamily` variable and assign the copied grocery list to it
+groceriesForFamily = c.copy(groceries)
+# Use `deepcopy()` and assign the copied list to a `groceriesForKids` variable
+groceriesForKids = c.deepcopy(groceries)
+```
+
+29. How Does List Comprehension Work In Python?
+
+List comprehension is, basically speaking, a way of elegantly constructing your lists. The best thing about this for those who love math is the fact that they look a lot like mathematical lists.
+
+```
+[x**2 for x in range(10)]
+>> [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 22. one django application and want to run 2 different python version like 2 different node model
