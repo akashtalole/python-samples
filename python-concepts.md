@@ -29,7 +29,7 @@ Tuples are used to collect an immutable ordered list of elements. This means tha
 
 So, if you’re defining a constant set of values and all you’re going to do with it is iterate through it, use a tuple instead of a list. It will be faster than working with lists and also safer, as the tuples contain “write-protect” data.
 
-#Lists Versus Dictionaries
+# Lists Versus Dictionaries
 
 - A list stores an ordered collection of items, so it keeps some order. Dictionaries don’t have any order.
 Dictionaries are known to associate each key with a value, while lists just contain values.
@@ -257,4 +257,58 @@ print(a[0]) # first element
 print(a[-1]) # last element
 ```
 
+23. How To Transform Python Lists Into Other Data Structures?
+
+- How To Convert A List To A String?
+```
+# List of Strings to a String
+listOfStrings = ['One', 'Two', 'Three']
+strOfStrings = ''.join(listOfStrings)
+print(strOfStrings)
+>>> OneTwoThree
+
+# List Of Integers to a String
+listOfNumbers = [1, 2, 3]
+strOfNumbers = ''.join(str(n) for n in listOfNumbers)
+print(strOfNumbers)
+>>> 23
+```
+
+- How To Convert A List To A Tuple
+
+You can change a list to a tuple in Python by using the tuple() function. Pass your list to this function, and you will get a tuple back!
+
+```
+# List of Strings to a String
+listOfStrings = ['One', 'Two', 'Three']
+
+# Pass your list to `tuple()`
+print(tuple(listOfStrings))
+>> ('One', 'Two', 'Three')
+```
+
+- How To Convert Your List To A Set In Python
+```
+# List of Strings to a String
+listOfStrings = ['One', 'Two', 'Three'] 
+
+# Transform your list into a set
+print(set(listOfStrings))
+>> {'Three', 'Two', 'One'}
+```
+
+- How To Convert Lists To A Dictionaries
+A dictionary works with keys and values, so the conversion from a list to a dictionary might be less straightforward.
+```
+helloWorld = ['hello','world','1','2']
+print(list(zip(helloWorld)))
+>> [('hello',), ('world',), ('1',), ('2',)]
+
+# Convert to a dictionary
+helloWorldDictionary = dict(zip(helloWorld[0::2], helloWorld[1::2]))
+
+# Print out the result
+print(helloWorldDictionary)
+>> {'hello': 'world', '1': '2'}
+```
 22. one django application and want to run 2 different python version like 2 different node model
