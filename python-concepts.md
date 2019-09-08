@@ -248,6 +248,8 @@ print (lst[::-1]) # ['Christopher', 'Alex', 'Rahul', 'Anil', 'Vijay', 'Ashok', '
 
 ```
 
+https://www.datacamp.com/community/tutorials/18-most-common-python-list-questions-learn-python
+
 21. How To Randomly Select An Element In A List
 
 You can select a random element from your list with the random package:
