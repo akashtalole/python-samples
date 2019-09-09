@@ -109,7 +109,7 @@ An interpreted language is any programming language which is **not in machine le
 
 5. What is pep 8?
 
-PEP stands for **Python Enhancement Proposal**. It is a set of rules that specify how to format Python code for maximum readability.
+PEP stands for **Python Enhancement Proposal**. It is a set of rules that specify how to format Python code for maximum readability. PEP 8 is a coding convention, a set of recommendation, about how to write your Python code more readable.
 
 6. How is memory managed in Python?
 
@@ -412,5 +412,236 @@ List comprehension is, basically speaking, a way of elegantly constructing your 
 ```
 [x**2 for x in range(10)]
 >> [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+30. What is pickling and unpickling?
+
+- Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using dump function, this process is called pickling. While the process of retrieving original Python objects from the stored string representation is called unpickling.
+
+31. Is indentation required in python?
+
+- Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
+
+32. What is the difference between Python Arrays and lists?
+
+- Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a single data type elements whereas lists can hold any data type elements.
+
+```
+import array as arr
+My_Array=arr.array('i',[1,2,3,4])
+My_list=[1,'abc',1.20]
+print(My_Array)
+>> array(‘i’, [1, 2, 3, 4])
+print(My_list)
+>> [1, ‘abc’, 1.2]
+```
+
+33. What are functions in Python?
+
+- A function is a block of code which is executed only when it is called.
+
+```
+def funct():
+	print("hi akash")
+funct()
+```
+
+34. What is __init__?
+
+- "__init__" is a reseved method in python classes. It is called as a constructor in object oriented terminology. This method is called when an object is created from a class and it allows the class to initialize the attributes of the class.
+
+```
+class Employee:
+	def __init__(self, name, age,salary):
+		self.name = name
+		self.age = age
+		self.salary = 20000
+
+E1 = Employee("XYZ", 23, 20000) # E1 is the instance of class Employee.
+
+#__init__ allocates memory for E1. 
+print(E1.name)
+>> XYZ
+print(E1.age)
+>> 23
+print(E1.salary)
+>> 20000
+```
+
+35. What is self? 
+
+- The word 'self' is used to represent the instance of a class. By using the "self" keyword we access the attributes and methods of the class in python.
+
+36. What is a lambda function?
+
+- In Python, anonymous function means that a function is without a name. As we already know that def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions. It has the following syntax:
+
+```
+lambda arguments: expression
+```
+
+- This function can have any number of arguments but only one expression, which is evaluated and returned.
+- One is free to use lambda functions wherever function objects are required.
+- You need to keep in your knowledge that lambda functions are syntactically restricted to a single expression.
+- It has various uses in particular fields of programming besides other types of expressions in functions.
+
+```
+# Normal Function
+def add(x, y):
+	return x+y
+print(add(5,6))
+>> 11
+
+# lambda function
+a = lambda x,y : x+y
+print(a(5, 6))
+>> 11
+```
+
+- Lambda functions can be used along with built-in functions like filter(), map() and reduce().
+
+37. What is filter() in python?
+
+- The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
+
+- Syntax
+```
+filter(function, sequence)
+Parameters:
+function: function that tests if each element of a 
+sequence true or not.
+sequence: sequence which needs to be filtered, it can 
+be sets, lists, tuples, or containers of any iterators.
+Retruns:
+returns an iterator that is already filtered.
+```
+
+- Example
+```
+# function that filters vowels 
+def fun(variable): 
+	letters = ['a', 'e', 'i', 'o', 'u'] 
+	if (variable in letters): 
+		return True
+	else: 
+		return False
+
+
+# sequence 
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r'] 
+
+# using filter function 
+filtered = filter(fun, sequence) 
+
+print('The filtered letters are:') 
+for s in filtered: 
+	print(s) 
+```
+
+- Output
+```
+The filtered letters are:
+e
+e
+```
+
+- Application
+
+It is normally used with Lambda functions to separate list, tuple, or sets.
+```
+# a list contains both even and odd numbers. 
+seq = [0, 1, 2, 3, 5, 8, 13] 
+
+# result contains odd numbers of the list 
+result = filter(lambda x: x % 2, seq) 
+print(list(result)) 
+>> [1, 3, 5, 13]
+
+# result contains even numbers of the list 
+result = filter(lambda x: x % 2 == 0, seq) 
+print(list(result)) 
+>> [0, 2, 8]
+```
+
+38. What is map() in python?
+
+- map() function returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)
+
+- Syntax
+
+```
+map(fun, iter)
+```
+- fun : It is a function to which map passes each element of given iterable.
+- iter : It is a iterable which is to be mapped.
+- Returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)
+
+**NOTE** : You can pass one or more iterable to the map() function. The returned value from map() (map object) then can be passed to functions like list() (to create a list), set() (to create a set) .
+
+```
+# Python program to demonstrate working 
+# of map. 
+
+# Return double of n 
+def addition(n): 
+	return n + n 
+
+# We double all numbers using map() 
+numbers = (1, 2, 3, 4) 
+result = map(addition, numbers) 
+print(list(result)) 
+>> {2, 4, 6, 8}
+```
+
+- We can also use lambda expressions with map to achieve above result.
+```
+# Double all numbers using map and lambda 
+
+numbers = (1, 2, 3, 4) 
+result = map(lambda x: x + x, numbers) 
+print(list(result)) 
+>> {2, 4, 6, 8}
+```
+
+```
+# List of strings 
+l = ['sat', 'bat', 'cat', 'mat'] 
+
+# map() can listify the list of strings individually 
+test = list(map(list, l)) 
+print(test) 
+>> [['s', 'a', 't'], ['b', 'a', 't'], ['c', 'a', 't'], ['m', 'a', 't']]
+```
+
+39. What is reduce() in python?
+
+The **reduce(fun,seq)** function is used to apply a particular function passed in its argument to all of the list elements mentioned in the sequence passed along.This function is defined in “functools” module.
+
+Working : 
+
+- At first step, first two elements of sequence are picked and the result is obtained.
+- Next step is to apply the same function to the previously attained result and the number just succeeding the second element and the result is again stored.
+- This process continues till no more elements are left in the container.
+- The final returned result is returned and printed on console.
+
+```
+# python code to demonstrate working of reduce() 
+
+# importing functools for reduce() 
+import functools 
+
+# initializing list 
+lis = [ 1 , 3, 5, 6, 2, ] 
+
+# using reduce to compute sum of list 
+print ("The sum of the list elements is : ",end="") 
+print (functools.reduce(lambda a,b : a+b,lis)) 
+
+# using reduce to compute maximum element from list 
+print ("The maximum element of the list is : ",end="") 
+>> The sum of the list elements is : 17
+print (functools.reduce(lambda a,b : a if a > b else b,lis)) 
+>> The maximum element of the list is : 6
+
 ```
 22. one django application and want to run 2 different python version like 2 different node model
