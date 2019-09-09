@@ -417,6 +417,9 @@ List comprehension is, basically speaking, a way of elegantly constructing your 
 30. What is pickling and unpickling?
 
 - Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using dump function, this process is called pickling. While the process of retrieving original Python objects from the stored string representation is called unpickling.
+- The pickle module implements a fundamental, but powerful algorithm for serializing and de-serializing a Python object structure.
+- Pickling - is the process whereby a Python object hierarchy is converted into a byte stream, and Unpickling - is the inverse operation, whereby a byte stream is converted back into an object hierarchy.
+- Pickling (and unpickling) is alternatively known as serialization, marshalling, or flattening.
 
 31. Is indentation required in python?
 
@@ -644,4 +647,243 @@ print (functools.reduce(lambda a,b : a if a > b else b,lis))
 >> The maximum element of the list is : 6
 
 ```
-22. one django application and want to run 2 different python version like 2 different node model
+
+40. one django application and want to run 2 different python version like 2 different node model
+
+41. What are docstrings in Python?
+
+- Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well.
+
+```
+"""
+Using docstring as a comment.
+This code divides 2 numbers
+"""
+x=8
+y=4
+z=x/y
+print(z)
+>> 2.0
+```
+
+42. What is the purpose of is, not and in operators?
+
+- Operators are special functions. They take one or more values and produce a corresponding result.
+
+**is**: returns true when 2 operands are true  (Example: “a” is ‘a’)
+
+**not**: returns the inverse of the boolean value
+
+**in**: checks if some element is present in some sequence
+
+43. What are the generators in python?
+
+- Functions that return an iterable set of items are called generators.
+- **Generator-Function** : A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. If the body of a def contains yield, the function automatically becomes a generator function.
+
+```
+# A generator function that yields 1 for first time, 
+# 2 second time and 3 third time 
+def simpleGeneratorFun(): 
+	yield 1			
+	yield 2			
+	yield 3			
+
+# Driver code to check above generator function 
+for value in simpleGeneratorFun(): 
+	print(value) 
+
+>> 1
+>> 2
+>> 3
+```
+
+- **Generator-Object** : Generator functions return a generator object. Generator objects are used either by calling the next method on the generator object or using the generator object in a “for in” loop (as shown in the above program).
+
+```
+# A Python program to demonstrate use of 
+# generator object with next() 
+
+# A generator function 
+def simpleGeneratorFun(): 
+	yield 1
+	yield 2
+	yield 3
+
+# x is a generator object 
+x = simpleGeneratorFun() 
+
+# Iterating over the generator object using next 
+print(x.next()); # In Python 3, __next__() 
+print(x.next()); 
+print(x.next()); 
+
+>> 1
+2
+3
+```
+
+- Generator function returns an generator object that is iterable, i.e., can be used as an Iterators.
+
+44. How will you capitalize the first letter of string?
+
+- In Python, the capitalize() method capitalizes the first letter of a string. If the string already consists of a capital letter at the beginning, then, it returns the original string.
+
+45. How will you convert a string to all lowercase or uppercase?
+
+- To convert a string to lowercase, lower() function can be used and for uppercase, upper().
+
+```
+stg='ABCD'
+print(stg.lower())
+print(stg.upper())
+```
+
+46. What is the usage of help() and dir() function in Python?
+
+- Help() and dir() both functions are accessible from the Python interpreter and used for viewing a consolidated dump of built-in functions. 
+
+- **Help()** function: The help() function is used to display the documentation string and also facilitates you to see the help related to modules, keywords, attributes, etc.
+- **Dir()** function: The dir() function is used to display the defined symbols.
+
+```
+>>> help(x)
+Help on generator object:
+
+sgf = class generator(object)
+ |  Methods defined here:
+ |
+ |  __del__(...)
+ |
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |
+ |  __next__(self, /)
+ |      Implement next(self).
+
+>>> dir(x)
+['__class__', '__del__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__name__', '__ne__', '__new__', '__next__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'close', 'gi_code', 'gi_frame', 'gi_running', 'gi_yieldfrom', 'send', 'throw']
+```
+
+47. Whenever Python exits, why isn’t all the memory de-allocated?
+
+- Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from the global namespaces are not always de-allocated or freed.
+- It is impossible to de-allocate those portions of memory that are reserved by the C library.
+- On exit, because of having its own efficient clean up mechanism, Python would try to de-allocate/destroy every other object.
+
+48. What is a dictionary in Python?
+
+- Dictionary in Python is an unordered collection of data values, used to store data values like a map, which unlike other Data Types that hold only single value as an element, Dictionary holds key:value pair. 
+- Key value is provided in the dictionary to make it more optimized. 
+- Each key-value pair in a Dictionary is separated by a colon :, whereas each key is separated by a ‘comma’.
+
+```
+dict={'Country':'India','Capital':'Delhi','PM':'Modi'}
+print dict[Country]
+>> India
+print dict[Capital]
+>> Delhi
+print dict[PM]
+>> Modi
+```
+
+49. What does this mean: ```*args```, ```**kwargs```? And why would we use it?
+
+- The special syntax ```*args``` in function definitions in python is used to pass a variable number of arguments to a function. It is used to pass a non-keyworded, variable-length argument list.
+```
+arg = list or tuple
+**kwargs = dic
+```
+
+```
+# Python program to illustrate 
+# *args for variable number of arguments 
+def myFun(*argv): 
+	for arg in argv: 
+		print (arg) 
+	
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks') 
+```
+
+- The special syntax ```**kwargs``` in function definitions in python is used to pass a keyworded, variable-length argument list. We use the name kwargs with the double star. The reason is because the double star allows us to pass through keyword arguments (and any number of them).
+
+```
+# Python program to illustrate 
+# *kargs for variable number of keyword arguments 
+
+def myFun(**kwargs): 
+	for key, value in kwargs.items(): 
+		print ("%s == %s" %(key, value)) 
+
+# Driver code 
+myFun(first ='Geeks', mid ='for', last='Geeks')	 
+```
+
+50. What does len() do?
+
+- It is used to determine the length of a string, a list, an array, etc.
+
+```
+stg='ABCD'
+len(stg)
+>> 4
+```
+
+51. Explain split(), sub(), subn(), escape() methods of “re” module in Python.
+
+- To modify the strings, Python’s “re” module is providing 3 methods. They are:
+
+**split()** – Split string by the occurrences of a character or a pattern, upon finding that pattern, the remaining characters from the string are returned as part of the resulting list.
+```
+re.split(pattern, string, maxsplit=0, flags=0)
+```
+
+Example:
+```
+>>> a = "akash talole"
+>>> a.split(' ')
+['akash', 'talole']
+
+# using re
+>>> import re
+>>> a = "akash,talole"
+>>> re.split(',',a)
+['akash', 'talole']
+```
+
+```
+from re import split 
+
+# '\W+' denotes Non-Alphanumeric Characters or group of characters 
+# Upon finding ',' or whitespace ' ', the split(), splits the string from that point 
+print(split('\W+', 'Words, words , Words')) 
+print(split('\W+', "Word's words Words")) 
+
+# Here ':', ' ' ,',' are not AlphaNumeric thus, the point where splitting occurs 
+print(split('\W+', 'On 12th Jan 2016, at 11:02 AM')) 
+
+# '\d+' denotes Numeric Characters or group of characters 
+# Spliting occurs at '12', '2016', '11', '02' only 
+print(split('\d+', 'On 12th Jan 2016, at 11:02 AM')) 
+
+Output:
+['Words', 'words', 'Words']
+['Word', 's', 'words', 'Words']
+['On', '12th', 'Jan', '2016', 'at', '11', '02', 'AM']
+['On ', 'th Jan ', ', at ', ':', ' AM']
+```
+
+**sub()** – finds all substrings where the regex pattern matches and then replace them with a different string
+```
+re.sub(pattern, repl, string, count=0, flags=0)
+```
+
+**subn()** – it is similar to sub() and also returns the new string along with the no. of replacements.
+```
+re.subn(pattern, repl, string, count=0, flags=0)
+```
+
+**escape()** - Return string with all non-alphanumerics backslashed, this is useful if you want to match an arbitrary literal string that may have regular expression metacharacters in it.
