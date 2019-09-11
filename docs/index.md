@@ -887,3 +887,7 @@ re.subn(pattern, repl, string, count=0, flags=0)
 ```
 
 **escape()** - Return string with all non-alphanumerics backslashed, this is useful if you want to match an arbitrary literal string that may have regular expression metacharacters in it.
+
+52. What is unittest in Python?
+
+- A unit testing framework in Python is known as unittest. It supports sharing of setups, automation testing, shutdown code for tests, aggregation of tests into collections etc.
