@@ -1,0 +1,46 @@
+{
+        "ready"          : "Y",
+        "confirm_license": "OK",
+        "keymap"         : "us.kbd",
+        "hostname"       : "myhost2.com",
+        "proxy"          : "",
+        "interface"      : 0,
+        "ipv4_configure" : "Y",
+        "ipv4_dhcp"      : "N",
+        "ipv6_configure" : "N",
+
+        "network_configuration": {
+                "inet"      : "10.10.10.3",
+                "netmask"   : "255.255.255.224",
+                "gateway"   : "10.10.10.1",
+                "nameserver": "8.8.8.8",
+                "inet6"     : "",
+                "gateway6"  : ""
+        },
+
+        "ntp"           : "0.asia.pool.ntp.org",
+        "vulture_config": 1,
+
+        "node_config"   : {
+                "primary_hostname": "myhost1.com",
+                "primary_ip"      : "10.10.10.2",
+                "cluster_password": "aePNNzpJ"
+        },
+
+        "email_address"   : "",
+        "registration_key": "",
+
+        "pki"    : {
+                "country"          : "",
+                "state"            : "",
+                "city"             : "",
+                "organization"     : "",
+                "organization_unit": ""
+        },
+
+        "admin": {
+                "username"  : "admin",
+                "password"  : "password",
+                "repassword": "password"
+        }
+}

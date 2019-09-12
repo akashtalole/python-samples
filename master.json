@@ -1,0 +1,47 @@
+{
+        "ready"          : "Y",
+        "confirm_license": "OK",
+        "keymap"         : "us.kbd",
+        "hostname"       : "myhost1.com",
+        "proxy"          : "",
+        "interface"      : 0,
+        "ipv4_configure" : "Y",
+        "ipv4_dhcp"      : "N",
+        "ipv6_configure" : "N",
+
+        "network_configuration": {
+                "inet"      : "10.10.10.2",
+                "netmask"   : "255.255.255.224",
+                "gateway"   : "10.10.10.1",
+                "nameserver": "8.8.8.8",
+                "inet6"     : "",
+                "gateway6"  : ""
+        },
+
+        "ntp"           : "0.asia.pool.ntp.org",
+        "vulture_config": 0,
+
+        "node_config"   : {
+                "primary_hostname": "",
+                "primary_ip"      : "",
+                "cluster_password": ""
+        },
+
+        "email_address"   : "taloleakash@gmail.com",
+        "registration_key": "",
+
+        "pki"    : {
+                "country"          : "IN",
+                "state"            : "MH",
+                "city"             : "NSK",
+                "organization"     : "sky",
+                "organization_unit": "Re"
+        },
+
+        "admin": {
+                "username"  : "admin",
+                "password"  : "password",
+                "repassword": "password"
+        }
+}
+
