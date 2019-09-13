@@ -1,6 +1,13 @@
 language: python
+
+services:
+  - docker
+  
 python:
-  - "2.7"
+  - "3.7"
+
+cache: pip
+
 # command to install dependencies
 install:
   - pip install -r requirements.txt
