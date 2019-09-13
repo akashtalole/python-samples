@@ -1,5 +1,8 @@
 # python-samples
 
+### Status
+[![Build Status](https://travis-ci.org/akashtalole/python-samples.svg?branch=master)](https://travis-ci.org/akashtalole/python-samples)
+
 Useful Python Sample Codes
 
 ## Getting Started
