@@ -891,3 +891,98 @@ re.subn(pattern, repl, string, count=0, flags=0)
 52. What is unittest in Python?
 
 - A unit testing framework in Python is known as unittest. It supports sharing of setups, automation testing, shutdown code for tests, aggregation of tests into collections etc.
+
+
+=======================================================================================
+
+53. What is conda?
+
+- Package, dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN, and more.
+
+- Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. 
+- Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.
+
+- Conda as a package manager helps you find and install packages. 
+- If you need a package that requires a different version of Python, you do not need to switch to a different environment manager, because conda is also an environment manager. With just a few commands, you can set up a totally separate environment to run that different version of Python, while continuing to run your usual version of Python in your normal environment.
+
+54. What is numpy?
+
+- NumPy is the fundamental package for scientific computing with Python. It mostly used for solving matrix problems.
+- Creating a Numpy Array:
+```
+>>> import numpy as np
+>>> arr = np.array([])
+>>> type(arr)
+numpy.ndarray
+```
+
+55. What is pandas?
+
+- Pandas is the most popular machine learning library written in python, for data manipulation and analysis.
+- Creating a Series: A Series is a one dimensional labeled array like object.
+```
+>>> pd.Series([1,2,3,4,5])
+0    1
+1    2
+2    3
+3    4
+4    5
+dtype: int64
+```
+
+56. What is scikit-learn?
+
+- Matplotlib, a great library for Data Visualization
+
+```
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+dataset = pd.read_csv("../dataset/student_result.csv")
+
+# This line will shows the result distribution
+# result attribute contains two types of value. 
+# 1 indicates `pass` and `0` indicates `fail`
+dataset.result.value_counts().plot.bar() 
+```
+
+57. What is matplotlib?
+
+- A library that provides a range of Supervised and Unsupervised Learning Algorithms. This library mainly focused on model building.
+```
+import numpy as np 
+import pandas as pd
+
+# 4 Supervised Classification Learning Algorithms
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+>>> dataset = pd.read_csv(r"../dataset/student_result.csv")
+>>> print(dataset.head())
+
+   math  bangla  english  result
+0    70      80       90       1
+1    30      40       50       0
+2    50      20       35       0
+3    80      33       33       1
+4    33      35       36       1
+```
+
+58. What is NLTK?
+
+- Natural Language Toolkit (NLTK) is a library for NLP (Natural Langue Processing).
+- According to techopedia, Tokenization is the act of breaking up a sequence of strings into pieces such as words, keywords, phrases, symbols and other elements called tokens.
+
+```
+>>> from nltk.tokenize import word_tokenize
+>>> sentence = "Hello! My Name is Nasir Islam Sujan."
+
+# word_tokenize method will split the sentence into many token/pieces. 
+>>> word_tokenize(sentence)
+['Hello', '!', 'My', 'Name', 'is', 'Nasir', 'Islam', 'Sujan', '.']
+```
