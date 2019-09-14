@@ -1,4 +1,4 @@
-# python-samples
+# python-samples [![Build Status](https://travis-ci.org/akashtalole/python-samples.svg?branch=master)](https://travis-ci.org/akashtalole/python-samples)
 
 Useful Python Sample Codes
 
