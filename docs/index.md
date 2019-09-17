@@ -986,3 +986,21 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 >>> word_tokenize(sentence)
 ['Hello', '!', 'My', 'Name', 'is', 'Nasir', 'Islam', 'Sujan', '.']
 ```
+
+
+# Kubernetes
+
+1. How is Kubernetes related to Docker?
+
+- It’s a known fact that Docker provides the lifecycle management of containers and a Docker image builds the runtime containers. 
+- But, since these individual containers have to communicate, Kubernetes is used.  So, Docker builds the containers and these containers communicate with each other via Kubernetes. 
+- So, containers running on multiple hosts can be manually linked and orchestrated using Kubernetes.
+
+2. What is Container Orchestration?
+
+- Consider a scenario where you have 5-6 microservices for an application. Now, these microservices are put in individual containers, but won’t be able to communicate without container orchestration. 
+- So, as orchestration means the amalgamation of all instruments playing together in harmony in music, similarly container orchestration means all the services in individual containers working together to fulfill the needs of a single server.
+
+3. What is the need for Container Orchestration?
+
+- Consider you have 5-6 microservices for a single application performing various tasks, and all these microservices are put inside containers. Now, to make sure that these containers communicate with each other we need container orchestration.
