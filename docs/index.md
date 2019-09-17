@@ -990,6 +990,32 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 # Kubernetes
 
+- The Kubernetes Master is a collection of three processes that run on a single node in your cluster, which is designated as the master node. Those processes are: 
+- kube-apiserver
+- kube-controller-manager
+- kube-scheduler.
+
+- Each individual non-master node in your cluster runs two processes:
+- kubelet, which communicates with the Kubernetes Master.
+- kube-proxy, a network proxy which reflects Kubernetes networking services on each node.
+
+- Kubernetes Objects
+- The basic Kubernetes objects include:
+
+- Pod
+- Service
+- Volume
+- Namespace
+
+- In addition, Kubernetes contains a number of higher-level abstractions called Controllers. Controllers build upon the basic objects, and provide additional functionality and convenience features. They include:
+
+- ReplicaSet
+- Deployment
+- StatefulSet
+- DaemonSet
+- Job
+
+
 1. How is Kubernetes related to Docker?
 
 - It’s a known fact that Docker provides the lifecycle management of containers and a Docker image builds the runtime containers. 
