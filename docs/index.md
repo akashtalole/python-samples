@@ -1030,3 +1030,18 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 3. What is the need for Container Orchestration?
 
 - Consider you have 5-6 microservices for a single application performing various tasks, and all these microservices are put inside containers. Now, to make sure that these containers communicate with each other we need container orchestration.
+
+
+# IoT
+
+1. What are the main parts of IoT systems?
+
+- IoT system consists of three main parts:
+
+Sensors
+Network connectivity
+Data storage applications.
+
+- What are security concerns related to IoT?
+
+- This is the common IoT Interview Questions asked in an interview. Data security and privacy are major concerns related to IoT. These devices are vulnerable to hacking and cloud endpoints could be used by hackers to attack servers. Software developers and device designers have to ensure adequate security and privacy measures.
