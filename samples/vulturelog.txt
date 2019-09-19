@@ -1,0 +1,200 @@
+Vulture master node installation log
+
+root@waf:~ # /var/bootstrap/bootstrap.py --config /var/bootstrap/sky-waf01_conf_master.json
+#     # #     # #       ####### #     # ######  #######
+#     # #     # #          #    #     # #     # #
+#     # #     # #          #    #     # ######  #####
+ #   #  #     # #          #    #     # #   #   #
+  # #   #     # #          #    #     # #    #  #
+   #     #####  #######    #     #####  #     # #######
+     __ __    __ __ __
+|  ||_ |__)  (_ (_ /  \
+|/\||__|__)  __)__)\__/
+     __ __    __  __  __
+|  ||_ |__)  |_ ||__)|_ |  | /\ |  |
+|/\||__|__)  |  || \ |__|/\|/--\|__|__
+
+
+Thank you for using Vulture !
+This script will bootstrap vulture
+#     # #     # #       ####### #     # ######  #######
+#     # #     # #          #    #     # #     # #
+#     # #     # #          #    #     # ######  #####
+ #   #  #     # #          #    #     # #   #   #
+  # #   #     # #          #    #     # #    #  #
+   #     #####  #######    #     #####  #     # #######
+     __ __    __ __ __
+|  ||_ |__)  (_ (_ /  \
+|/\||__|__)  __)__)\__/
+     __ __    __  __  __
+|  ||_ |__)  |_ ||__)|_ |  | /\ |  |
+|/\||__|__)  |  || \ |__|/\|/--\|__|__
+
+
+Setting hostname: sky-waf01.akashtalole.com
+Interface to configure: (u'vmx0', u'00:50:56:a6:1b:48')
+
+hostname: sky-waf01.akashtalole.com
+inet6:
+gateway6:
+netmask: 255.255.255.0
+proxy:
+interface: vmx0
+DHCP: False
+nameserver: 8.8.8.8
+gateway: 10.10.154.1
+inet: 192.168.0.2
+
+Configuring network...
+Configuring NTP service...
+Sending mail to taloleakash@gmail.com
+
+Please check your mailbox for the registration key.
+Please provide your Vulture registration key: 6474cdbcc1f4c184
+Validating registration key...
+Downloading Vulture LIBS...
+[+] Updating Vulture-LIBS...
+ELF ldconfig path: /lib /usr/lib /usr/lib/compat /usr/local/lib /usr/local/lib/ipsec /usr/local/lib/mysql /usr/local/lib/perl5/5.28/mach/CORE
+32-bit compatibility ldconfig path: /usr/lib32
+[*] Update of Vulture-LIBS ended successfully
+Downloading Vulture...
+PKI Configuration
+Administrator configuration
+
+Vulture services will now start.
+You may have to wait several minutes.
+Please wait...
+
+mongod not running? (check /var/db/mongodb/mongod.lock).
+Starting mongod.
+Waiting for MongoDB restarting ...
+MongoDB restarted
+Data import in progress...
+ModDefender core rules generated
+Vulture internal repository successfully imported
+Vulture RS successfully imported
+Defender whitelist 'Dokuwiki WL' successfully imported
+Defender whitelist 'Drupal WL' successfully imported
+Defender whitelist 'Etherpad Lite WL' successfully imported
+Defender whitelist 'Iris WL' successfully imported
+Defender whitelist 'Owncloud WL' successfully imported
+Defender whitelist 'Rutorrent WL' successfully imported
+Defender whitelist 'Wordpress WL' successfully imported
+Defender whitelist 'Wordpress Minimal WL' successfully imported
+Defender whitelist 'Zerobin WL' successfully imported
+Defender Whitelists imported
+Vulture groups successfully imported
+Vulture ModSec Default Policy successfully imported
+Default Vulture settings successfully imported
+Default NTP settings successfully imported
+Default Packet Filter settings successfully imported
+Node version successfully imported
+Default Template successfully imported
+Default Worker Profile successfully imported
+Doing /home/vlt-sys/Engine/conf/certs
+
+vlt-adm SSH account has been created with the following password: 76EONYiM
+Don't forget to change it after installation.
+
+
+Primary Node successfully configured !
+You can connect to the Vulture GUI by pointing your web browser to https://192.168.0.2:8000
+Thank you for using Vulture !
+
+#     # #     # #       ####### #     # ######  #######
+#     # #     # #          #    #     # #     # #
+#     # #     # #          #    #     # ######  #####
+ #   #  #     # #          #    #     # #   #   #
+  # #   #     # #          #    #     # #    #  #
+   #     #####  #######    #     #####  #     # #######
+     __ __    __ __ __
+|  ||_ |__)  (_ (_ /  \
+|/\||__|__)  __)__)\__/
+     __ __    __  __  __
+|  ||_ |__)  |_ ||__)|_ |  | /\ |  |
+|/\||__|__)  |  || \ |__|/\|/--\|__|__
+
+
+2019-09-19 14:07:38,003 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:07:38,003 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:07:38,961 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:07:38,961 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:07:55,153 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:07:55,153 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:07:55,921 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:07:55,921 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+
+2019-09-19 14:21:40,617 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:40,617 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:41,276 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:21:41,276 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:21:41,362 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:41,362 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:42,022 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "GET /11.2/Vulture-Engine-2.4.41-68.tar.gz HTTP/1.1" 200 3542556
+2019-09-19 14:21:42,022 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "GET /11.2/Vulture-Engine-2.4.41-68.tar.gz HTTP/1.1" 200 3542556
+2019-09-19 14:21:54,774 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:54,774 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:55,921 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:21:55,921 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "POST /11.2/vltUpdtMngr.php HTTP/1.1" 200 None
+2019-09-19 14:21:56,002 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:56,002 connectionpool:815 [DEBUG] Starting new HTTPS connection (1): dl.vultureproject.org:443
+2019-09-19 14:21:56,815 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "GET /11.2/Vulture-GUI-1.721.tar.gz HTTP/1.1" 200 4102512
+2019-09-19 14:21:56,815 connectionpool:396 [DEBUG] https://dl.vultureproject.org:443 "GET /11.2/Vulture-GUI-1.721.tar.gz HTTP/1.1" 200 4102512
+2019-09-19 14:22:27,506 configure_primary_node:134 [INFO] Vulture CA initialized
+2019-09-19 14:22:27,506 configure_primary_node:134 [INFO] Vulture CA initialized
+2019-09-19 14:22:27,557 configure_primary_node:155 [INFO] Node certificate created
+2019-09-19 14:22:27,557 configure_primary_node:155 [INFO] Node certificate created
+2019-09-19 14:23:28,584 replica_set_client:119 [ERROR] Unable to connect to the database : Cannot connect to database default :
+sky-waf03.akashtalole.com:9091: timed out
+2019-09-19 14:23:28,584 replica_set_client:119 [ERROR] Unable to connect to the database : Cannot connect to database default :
+sky-waf03.akashtalole.com:9091: timed out
+2019-09-19 08:54:29,486 service_base:73 [INFO] sentinel service stopped
+2019-09-19 08:54:29,486 service_base:73 [INFO] sentinel service stopped
+2019-09-19 08:54:29,546 service_base:92 [INFO] [redis] service started: Starting redis.
+
+2019-09-19 08:54:29,546 service_base:92 [INFO] [redis] service started: Starting redis.
+
+2019-09-19 08:54:29,577 service_base:103 [INFO] sentinel service started
+2019-09-19 08:54:29,577 service_base:103 [INFO] sentinel service started
+2019-09-19 08:54:29,578 configure_primary_node:164 [INFO] Redis configuration file successfully created
+2019-09-19 08:54:29,578 configure_primary_node:164 [INFO] Redis configuration file successfully created
+2019-09-19 08:54:29,584 configure_primary_node:172 [INFO] Mongodb configuration file successfully created
+2019-09-19 08:54:29,584 configure_primary_node:172 [INFO] Mongodb configuration file successfully created
+2019-09-19 08:54:29,591 configure_primary_node:181 [INFO] Add replica into Vulture configuration file
+2019-09-19 08:54:29,591 configure_primary_node:181 [INFO] Add replica into Vulture configuration file
+2019-09-19 08:54:36,275 configure_primary_node:209 [INFO] Mongodb server successfully started
+2019-09-19 08:54:36,275 configure_primary_node:209 [INFO] Mongodb server successfully started
+2019-09-19 08:54:36,292 database_client:77 [INFO] Trying to initiate replicaSet on sky-waf03.akashtalole.com:9091
+2019-09-19 08:54:36,292 database_client:77 [INFO] Trying to initiate replicaSet on sky-waf03.akashtalole.com:9091
+2019-09-19 08:54:36,638 database_client:82 [INFO] ReplicaSet successfully initialized on sky-waf03.akashtalole.com:9091
+2019-09-19 08:54:36,638 database_client:82 [INFO] ReplicaSet successfully initialized on sky-waf03.akashtalole.com:9091
+2019-09-19 08:54:36,639 configure_primary_node:214 [INFO] Initialization of the replica
+2019-09-19 08:54:36,639 configure_primary_node:214 [INFO] Initialization of the replica
+2019-09-19 08:54:39,784 configure_primary_node:237 [INFO] Replica Set successfully initialized
+2019-09-19 08:54:39,784 configure_primary_node:237 [INFO] Replica Set successfully initialized
+2019-09-19 08:54:39,920 configure_primary_node:250 [INFO] Admin user has been correctly added
+2019-09-19 08:54:39,920 configure_primary_node:250 [INFO] Admin user has been correctly added
+2019-09-19 08:54:39,942 configure_primary_node:276 [INFO] Creating SSLCertificate object of Cluster and Node
+2019-09-19 08:54:39,942 configure_primary_node:276 [INFO] Creating SSLCertificate object of Cluster and Node
+2019-09-19 08:54:40,045 configure_primary_node:303 [INFO] SSLCertificate object of Node and Cluster successfully created
+2019-09-19 08:54:40,045 configure_primary_node:303 [INFO] SSLCertificate object of Node and Cluster successfully created
+2019-09-19 08:54:40,045 configure_primary_node:304 [INFO] Creating Node and Cluster objects
+2019-09-19 08:54:40,045 configure_primary_node:304 [INFO] Creating Node and Cluster objects
+2019-09-19 08:55:10,752 system_settings:659 [ERROR] Node API Error for request https://sky-waf03.akashtalole.com:8000/api/logs/management/  reason: <urlopen error timed out>
+2019-09-19 08:55:10,752 system_settings:659 [ERROR] Node API Error for request https://sky-waf03.akashtalole.com:8000/api/logs/management/  reason: <urlopen error timed out>
+2019-09-19 08:55:10,753 configure_primary_node:320 [INFO] Cluster and Node successfully saved into database
+2019-09-19 08:55:10,753 configure_primary_node:320 [INFO] Cluster and Node successfully saved into database
+2019-09-19 08:55:10,917 configure_primary_node:343 [INFO] Add local interfaces to node
+2019-09-19 08:55:10,917 configure_primary_node:343 [INFO] Add local interfaces to node
+2019-09-19 08:55:10,917 configure_primary_node:346 [INFO] Add default gateway to node
+2019-09-19 08:55:10,917 configure_primary_node:346 [INFO] Add default gateway to node
+2019-09-19 08:55:10,919 configure_primary_node:349 [INFO] Populate database with initial data
+2019-09-19 08:55:10,919 configure_primary_node:349 [INFO] Populate database with initial data
+2019-09-19 08:55:41,936 system_settings:659 [ERROR] Node API Error for request https://sky-waf03.akashtalole.com:8000/api/logs/management/  reason: <urlopen error timed out>
+2019-09-19 08:55:41,936 system_settings:659 [ERROR] Node API Error for request https://sky-waf03.akashtalole.com:8000/api/logs/management/  reason: <urlopen error timed out>
+2019-09-19 08:59:13,134 system_settings:659 [ERROR] Node API Error for request https://sky-waf03.akashtalole.com:8000/api/logs/management/  reason: <urlopen error timed out>
+2019-09-19 08:59:13,134 system_settings:659 [ERROR] Node API Error for request https://sky-waf03.akashtalole.com:8000/api/logs/management/  reason: <urlopen error timed out>
+2019-09-19 08:59:13,364 configure_primary_node:353 [INFO] Building rc.conf.local file
+2019-09-19 08:59:13,364 configure_primary_node:353 [INFO] Building rc.conf.local file
+2019-09-19 08:59:13,815 configure_primary_node:356 [INFO] Building Vulture HTTP configuration files
+2019-09-19 08:59:13,815 configure_primary_node:356 [INFO] Building Vulture HTTP configuration files
