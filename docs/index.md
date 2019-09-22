@@ -1238,3 +1238,20 @@ peggy = Penguin()
 flying_test(blu)
 flying_test(peggy)
 ```
+
+# Python Django Commands
+
+```
+django-admin startproject skyproj
+python manage.py runserver 0.0.0.0:8000
+python manage.py startapp myapp
+#add model in myapp
+#add app in project setting
+python mange.py showmigrations
+python mange.py makemigrations
+python manage.py migrate
+#add management commad in app/management/commands
+python mange.py my_manage_command
+python manage.py createsuperuser
+python manage.py shell
+```
