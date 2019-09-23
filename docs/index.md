@@ -1255,3 +1255,135 @@ python mange.py my_manage_command
 python manage.py createsuperuser
 python manage.py shell
 ```
+
+1) Explain what is Django?
+
+Django is a web framework in python to develop a web application in python.
+
+2) Mention what are the features available in Django?
+
+Features available in Django are
+
+Admin Interface (CRUD)
+Templating
+Form handling
+Internationalization
+Session, user management, role-based permissions
+Object-relational mapping (ORM)
+Testing Framework
+Fantastic Documentation
+3) Mention the architecture of Django architecture?
+
+Django architecture consists of
+
+Models: It describes your database schema and your data structure
+Views: It controls what a user sees, the view retrieves data from appropriate models and execute any calculation made to the data and pass it to the template
+Templates: It determines how the user sees it. It describes how the data received from the views should be changed or formatted for display on the page
+Controller: The Django framework and URL parsing
+4) Why Django should be used for web-development?
+
+It allows you to divide code modules into logical groups to make it flexible to change
+To ease the website administration, it provides auto-generated web admin
+It provides pre-packaged API for common user tasks
+It gives you template system to define HTML template for your web page to avoid code duplication
+It enables you to define what URL be for a given function
+It enables you to separate business logic from the HTML
+Everything is in python
+5) Explain how you can create a project in Django?
+
+To start a project in Django, you use command $ django-admin.py and then use the command
+
+Project
+
+_init_.py
+
+manage.py
+
+settings.py
+
+urls.py
+
+6) Explain how you can set up the Database in Django?
+
+You can use the command edit mysite/setting.py , it is a normal python module with module level representing Django settings.
+
+Django uses SQLite by default; it is easy for Django users as such it won’t require any other type of installation. In the case your database choice is different that you have to the following keys in the DATABASE ‘default’ item to match your database connection settings
+
+Engines: you can change database by using ‘django.db.backends.sqlite3’ , ‘django.db.backeneds.mysql’, ‘django.db.backends.postgresql_psycopg2’, ‘django.db.backends.oracle’ and so on
+Name: The name of your database. In the case if you are using SQLite as your database, in that case database will be a file on your computer, Name should be a full absolute path, including file name of that file.
+If you are not choosing SQLite as your database then setting like Password, Host, User, etc. must be added.
+
+7) Give an example how you can write a VIEW in Django?
+
+Views are Django functions that take a request and return a response.  To write a view in Django we take a simple example of “Guru99_home” which uses the template Guru99_home.html and uses the date-time module to tell us what the time is whenever the page is refreshed.  The file we required to edit is called view.py, and it will be inside mysite/myapp/
+
+Copy the below code into it and save the file
+
+       from datatime import datetime
+
+      from django.shortcuts import render
+
+     def home (request):
+
+              return render(request, ‘Guru99_home.html’, {‘right_now’: datetime.utcnow()})
+
+Once you have determined the VIEW, you can uncomment this line in urls.py
+
+# url ( r ‘^$’ , ‘mysite.myapp.views.home’ , name ‘Guru99’),
+
+The last step will reload your web app so that the changes are noticed by the web server.
+
+8) Explain how you can setup static files in Django?
+
+There are three main things required to set up static files in Django
+
+Set STATIC_ROOT in settings.py
+run manage.py collectsatic
+set up a Static Files entry on the PythonAnywhere web tab
+9) Mention what does the Django templates consists of?
+
+The template is a simple text file.  It can create any text-based format like XML, CSV, HTML, etc.  A template contains variables that get replaced with values when the template is evaluated and tags (% tag %) that controls the logic of the template.
+
+10) Explain the use of session framework in Django?
+
+In Django, the session framework enables you to store and retrieve arbitrary data on a per-site-visitor basis.  It stores data on the server side and abstracts the receiving and sending of cookies.  Session can be implemented through a piece of middleware.
+
+11) Explain how you can use file based sessions?
+
+To use file based session you have to set the SESSION_ENGINE settings to “django.contrib.sessions.backends.file”
+
+12) Explain the migration in Django and how you can do in SQL?
+
+Migration in Django is to make changes to your models like deleting a model, adding a field, etc. into your database schema.  There are several commands you use to interact with migrations.
+
+Migrate
+Makemigrations
+Sqlmigrate
+To do the migration in SQL, you have to print the SQL statement for resetting sequences for a given app name.
+
+django-admin.py sqlsequencreset
+
+Use this command to generate SQL that will fix cases where a sequence is out sync with its automatically incremented field data.
+
+13) Mention what command line can be used to load data into Django?
+
+To load data into Django you have to use the command line Django-admin.py loaddata. The command line will searches the data and loads the contents of the named fixtures into the database.
+
+14) Explain what does django-admin.py makemessages command is used for?
+
+This command line executes over the entire source tree of the current directory and abstracts all the strings marked for translation.  It makes a message file in the locale directory.
+
+15) List out the inheritance styles in Django?
+
+In Django, there is three possible inheritance styles
+
+Abstract base classes: This style is used when you only wants parent’s class to hold information that you don’t want to type out for each child model
+Multi-table Inheritance: This style is used If you are sub-classing an existing model and need each model to have its own database table
+Proxy models: You can use this model, If you only want to modify the Python level behavior of the model, without changing the model’s fields
+16) Mention what does the Django field class types?
+
+Field class types determines
+
+The database column type
+The default HTML widget to avail while rendering a form field
+The minimal validation requirements used in Django admin and in automatically generated forms
