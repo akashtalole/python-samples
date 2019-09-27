@@ -1387,3 +1387,100 @@ Field class types determines
 The database column type
 The default HTML widget to avail while rendering a form field
 The minimal validation requirements used in Django admin and in automatically generated forms
+
+
+# Python: An Intro to caching
+
+- A cache is a way to store a limited amount of data such that future requests for said data can be retrieved faster. In this article, we’ll look at a simple example that uses a dictionary for our cache. Then we’ll move on to using the Python standard library’s functools module to create a cache. 
+- Let’s start by creating a class that will construct our cache dictionary and then we’ll extend it as necessary.
+
+```
+class MyCache:
+    
+    def __init__(self):
+        """Constructor"""
+        self.cache = {}
+        self.max_cache_size = 10
+```
+
+There’s nothing in particular that’s special in this class example. We just create a simple class and set up two class variables or properties, cache and max_cache_size. The cache is just an empty dictionary while the other is self-explanatory. Let’s flesh this code out and make it actually do something:
+
+```
+import datetime
+import random
+ 
+class MyCache:
+    """"""
+ 
+    #----------------------------------------------------------------------
+    def __init__(self):
+        """Constructor"""
+        self.cache = {}
+        self.max_cache_size = 10
+ 
+    #----------------------------------------------------------------------
+    def __contains__(self, key):
+        """
+        Returns True or False depending on whether or not the key is in the 
+        cache
+        """
+        return key in self.cache
+ 
+    #----------------------------------------------------------------------
+    def update(self, key, value):
+        """
+        Update the cache dictionary and optionally remove the oldest item
+        """
+        if key not in self.cache and len(self.cache) >= self.max_cache_size:
+            self.remove_oldest()
+ 
+        self.cache[key] = {'date_accessed': datetime.datetime.now(),
+                           'value': value}
+ 
+    #----------------------------------------------------------------------
+    def remove_oldest(self):
+        """
+        Remove the entry that has the oldest accessed date
+        """
+        oldest_entry = None
+        for key in self.cache:
+            if oldest_entry is None:
+                oldest_entry = key
+            elif self.cache[key]['date_accessed'] < self.cache[oldest_entry][
+                'date_accessed']:
+                oldest_entry = key
+        self.cache.pop(oldest_entry)
+ 
+    #----------------------------------------------------------------------
+    @property
+    def size(self):
+        """
+        Return the size of the cache
+        """
+        return len(self.cache)
+```
+
+- Here we import the datetime and random modules and then we see the class we created earlier. This time around, we add a few methods. One of the methods is a magic method called __contains__. I’m abusing it a little, but the basic idea is that it will allow us to check the class instance to see if it contains the key we’re looking for. The update method will update our cache dictionary with the new key / value pair. It will also remove the oldest entry if the maximum cache value is reached or exceeded. The remove_oldest method actually does the removing of the oldest entry in the dictionary, which in this case means the item that has the oldest access date. Finally we have a property called size which returns the size of our cache.
+
+If you add the following code, we can test that the cache works as expected:
+
+```
+if __name__ == '__main__':
+    # Test the cache
+    keys = ['test', 'red', 'fox', 'fence', 'junk',
+            'other', 'alpha', 'bravo', 'cal', 'devo',
+            'ele']
+    s = 'abcdefghijklmnop'
+    cache = MyCache()
+    for i, key in enumerate(keys):
+        if key in cache:
+            continue
+        else:
+            value = ''.join([random.choice(s) for i in range(20)])
+            cache.update(key, value)
+        print("#%s iterations, #%s cached entries" % (i+1, cache.size))
+    print
+```
+
+- In this example, we set up a bunch of predefined keys and loop over them. We add keys to the cache if they don’t already exist. The piece missing is a way to update the date accessed, but I’ll leave that as an exercise for the reader. If you run this code, you’ll notice that when the cache fills up, it starts deleting the old entries appropriately.
+- Now let’s move on and take a look at another way of creating caches using Python’s built-in functools module!
