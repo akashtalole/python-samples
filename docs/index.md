@@ -1484,3 +1484,12 @@ if __name__ == '__main__':
 
 - In this example, we set up a bunch of predefined keys and loop over them. We add keys to the cache if they don’t already exist. The piece missing is a way to update the date accessed, but I’ll leave that as an exercise for the reader. If you run this code, you’ll notice that when the cache fills up, it starts deleting the old entries appropriately.
 - Now let’s move on and take a look at another way of creating caches using Python’s built-in functools module!
+
+- The model layer¶
+Django provides an abstraction layer (the “models”) for structuring and manipulating the data of your Web application.
+
+- The view layer¶
+Django has the concept of “views” to encapsulate the logic responsible for processing a user’s request and for returning the response.
+
+- The template layer¶
+The template layer provides a designer-friendly syntax for rendering the information to be presented to the user.
