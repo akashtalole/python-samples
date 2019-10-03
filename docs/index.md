@@ -1,6 +1,7 @@
 ## Python Concepts
 
 [DevOps](devops.md)
+[k8s](k8s.md)
 
 # What is Python? Executive Summary
 - Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
