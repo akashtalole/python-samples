@@ -1,5 +1,7 @@
 ## Python Concepts
 
+[DevOps](devops.md)
+
 # What is Python? Executive Summary
 - Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
 - Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. 
@@ -1493,3 +1495,18 @@ Django has the concept of “views” to encapsulate the logic responsible for p
 
 - The template layer¶
 The template layer provides a designer-friendly syntax for rendering the information to be presented to the user.
+
+
+# Apache Kafka
+
+- Apache Kafka is a real-time streaming platform that is gaining broad adoption within large and small organizations. 
+-Kafka’s distributed microservices architecture and publish/subscribe protocol make it ideal for moving real-time data between enterprise systems and applications.
+
+- Use cases
+Messaging. Kafka works well as a replacement for a more traditional message broker
+Website Activity Tracking. The original use case for Kafka was to be able to rebuild a user activity tracking pipeline as a set of real-time publish-subscribe feeds.
+Metrics
+Log Aggregation
+Stream Processing
+Event Sourcing
+Commit Log.
