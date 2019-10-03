@@ -238,3 +238,39 @@ soc
 # CD Toolchain
 
 [Ansible](ansible.md)
+
+## Continuous Integration
+
+1. What is meant by Continuous Integration?
+
+It is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early.
+I suggest that you explain how you have implemented it in your previous job. You can refer the below given example:
+
+1. Developers check out code into their private workspaces.
+2. When they are done with it they commit the changes to the shared repository (Version Control Repository).
+3. The CI server monitors the repository and checks out changes when they occur.
+4. The CI server then pulls these changes and builds the system and also runs unit and integration tests.
+5. The CI server will now inform the team of the successful build.
+6. If the build or tests fails, the CI server will alert the team.
+7. The team will try to fix the issue at the earliest opportunity.
+8. This process keeps on repeating.
+
+2. Why do you need a Continuous Integration of Dev & Testing?
+
+For this answer, you should focus on the need of Continuous Integration. My suggestion would be to mention the below explanation in your answer:
+Continuous Integration of Dev and Testing improves the quality of software, and reduces the time taken to deliver it, by replacing the traditional practice of testing after completing all development. It allows Dev team to easily detect and locate problems early because developers need to integrate code into a shared repository several times a day (more frequently). Each check-in is then automatically tested.
+
+3. What are the success factors for Continuous Integration?
+
+Here you have to mention the requirements for Continuous Integration. You could include the following points in your answer:
+
+- Maintain a code repository
+- Automate the build
+- Make the build self-testing
+- Everyone commits to the baseline every day
+- Every commit (to baseline) should be built
+- Keep the build fast
+- Test in a clone of the production environment
+- Make it easy to get the latest deliverables
+- Everyone can see the results of the latest build
+- Automate deployment
