@@ -68,6 +68,118 @@ Start by talking about the age-old mechanisms of writing commands onto script fi
 
 As a DevOps engineer, an in-depth knowledge of processes, tools, and relevant technology are essential. You must also have a holistic understanding of the products, services, and systems in place. If your answers matched the answers we’ve provided above, you’re in great shape for future DevOps interviews. Good luck! If you’re looking for answers to specific DevOps interview questions that aren’t addressed here, ask them in the comments below. Our DevOps experts will help you craft the perfect answer.
 
+7. Which are the top DevOps tools? Which tools have you worked on?
+
+The most popular DevOps tools are mentioned below:
+Git : Version Control System tool
+Jenkins : Continuous Integration tool
+Selenium : Continuous Testing tool
+Puppet, Chef, Ansible : Configuration Management and Deployment tools
+Nagios : Continuous Monitoring tool
+Docker : Containerization tool
+
+8. How do all these tools work together?
+
+Given below is a generic logical flow where everything gets automated for seamless delivery. However, this flow may vary from organization to organization as per the requirement.
+
+- Developers develop the code and this source code is managed by Version Control System tools like Git etc.
+- Developers send this code to the Git repository and any changes made in the code is committed to this Repository.
+- Jenkins pulls this code from the repository using the Git plugin and build it using tools like Ant or Maven.
+- Configuration management tools like puppet deploys & provisions testing environment and then Jenkins releases this code on the test environment on which testing is done using tools like selenium.
+- Once the code is tested, Jenkins send it for deployment on the production server (even production server is provisioned & maintained by tools like puppet).
+- After deployment It is continuously monitored by tools like Nagios.
+- Docker containers provides testing environment to test the build features.
+
+9. What are the advantages of DevOps?
+
+For this answer, you can use your past experience and explain how DevOps helped you in your previous job. If you don’t have any such experience, then you can mention the below advantages.
+
+Technical benefits:
+
+Continuous software delivery
+Less complex problems to fix
+Faster resolution of problems
+Business benefits:
+
+Faster delivery of features
+More stable operating environments
+More time available to add value (rather than fix/maintain)
+
+10. What is the most important thing DevOps helps us achieve?
+
+According to me, the most important thing that DevOps helps us achieve is to get the changes into production as quickly as possible while minimizing risks in software quality assurance and compliance. This is the primary objective of DevOps. Learn more in this DevOps tutorial blog.
+However, you can add many other positive effects of DevOps. For example, clearer communication and better working relationships between teams i.e. both the Ops team and Dev team collaborate together to deliver good quality software which in turn leads to higher customer satisfaction.
+
+11. Explain with a use case where DevOps can be used in industry/ real-life.
+
+12. Explain your understanding and expertise on both the software development side and the technical operations side of an organization you have worked with in the past.
+
+For this answer, share your past experience and try to explain how flexible you were in your previous job. You can refer the below example:
+DevOps engineers almost always work in a 24/7 business-critical online environment. I was adaptable to on-call duties and was available to take up real-time, live-system responsibility. I successfully automated processes to support continuous software deployments. I have experience with public/private clouds, tools like Chef or Puppet, scripting and automation with tools like Python and PHP, and a background in Agile.
+
+
+## Version Control System (VCS)
+
+1. What is Version control?
+
+This is probably the easiest question you will face in the interview. My suggestion is to first give a definition of Version control. It is a system that records changes to a file or set of files over time so that you can recall specific versions later. Version control systems consist of a central shared repository where teammates can commit changes to a file or set of file. Then you can mention the uses of version control.
+
+Version control allows you to:
+- Revert files back to a previous state.
+- Revert the entire project back to a previous state.
+- Compare changes over time.
+- See who last modified something that might be causing a problem.
+- Who introduced an issue and when.
+
+2. What are the benefits of using version control?
+
+I will suggest you to include the following advantages of version control:
+- With Version Control System (VCS), all the team members are allowed to work freely on any file at any time. 
+- VCS will later allow you to merge all the changes into a common version.
+- All the past versions and variants are neatly packed up inside the VCS. When you need it, you can request any version at any time and you’ll have a snapshot of the complete project right at hand.
+- Every time you save a new version of your project, your VCS requires you to provide a short description of what was changed. Additionally, you can see what exactly was changed in the file’s content. This allows you to know who has made what change in the project.
+- A distributed VCS like Git allows all the team members to have complete history of the project so if there is a breakdown in the central server you can use any of your teammate’s local Git repository.
+
+3. Describe branching strategies you have used.
+
+This question is asked to test your branching experience so tell them about how you have used branching in your previous job and what purpose does it serves, you can refer the below points:
+
+- Feature branching
+A feature branch model keeps all of the changes for a particular feature inside of a branch. When the feature is fully tested and validated by automated tests, the branch is then merged into master.
+
+- Task branching
+In this model each task is implemented on its own branch with the task key included in the branch name. It is easy to see which code implements which task, just look for the task key in the branch name.
+
+- Release branching
+Once the develop branch has acquired enough features for a release, you can clone that branch to form a Release branch. Creating this branch starts the next release cycle, so no new features can be added after this point, only bug fixes, documentation generation, and other release-oriented tasks should go in this branch. Once it is ready to ship, the release gets merged into master and tagged with a version number. In addition, it should be merged back into develop branch, which may have progressed since the release was initiated.
+In the end tell them that branching strategies varies from one organization to another, so I know basic branching operations like delete, merge, checking out a branch etc.
+
+4. What is Git?
+
+I will suggest that you attempt this question by first explaining about the architecture of git as shown in the below diagram. You can refer to the explanation given below:
+
+- Git is a Distributed Version Control system (DVCS). It can track changes to a file and allows you to revert back to any particular change.
+- Its distributed architecture provides many advantages over other Version Control Systems (VCS) like SVN one major advantage is that it does not rely on a central server to store all the versions of a project’s files. Instead, every developer “clones” a copy of a repository I have shown in the diagram below with “Local repository” and has the full history of the project on his hard drive so that when there is a server outage, all you need for recovery is one of your teammate’s local Git repository.
+- There is a central cloud repository as well where developers can commit changes and share it with other teammates as you can see in the diagram where all collaborators are commiting changes “Remote repository”.
+
+5. Explain some basic Git commands?
+
+Below are some basic Git commands:
+
+| Command | Function |
+| ----------- | -------- |
+| git config --global user.name "name" | configure author name to be used with your commits |
+| git config --global user.email "email" | configure author email to be used with your commits | 
+| git init | create new local repository |
+| git clone path/to/repo | create working copy of local repo | 
+| git clone username@host:/path/to/repo | for a remote server use | 
+| git add <filname> | add one file |
+| git add * | add more file |
+| git commit -m "message" | commit canges to head |
+| git push origin master | send changes to the master branch of your remote repo|
+| git status | list the files u have changed and those u still need to add in commit |
+| git remote add origin <server> | if u havent conencted |
+
 - Culture
 - Automation
 - Measurement
@@ -103,3 +215,26 @@ sysadmins
 dba
 noc
 soc
+
+
+- unit testing
+- code quality/hygine
+- integration test
+- TDD 
+- BDD beahviour 
+- acceptance test driven ADTD
+- Perforamce testing
+- security testing
+
+# CI Toolchain
+
+1. Version Control(Github, SVN)
+2. CI systems(Jenkins, travisci, circlrci)
+3. Build(make/rake, maven, gulp, packer)
+4. Test(Unit testing Junit, pytest| Integration test robot )
+5. Artifact Repository(Artifactory, Nexus, Docker hub, AWS s3)
+6. Deployment(Rundeck, deploynator)
+
+# CD Toolchain
+
+[Ansible](ansible.md)

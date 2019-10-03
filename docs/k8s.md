@@ -582,19 +582,15 @@ Sites :
 6. Does the provider issue a private registry for container images?
 7. How well is the container runtime environment integrated with other cloud services?
 8. Which billing models are available?
---------
 
 
+```
 kubeadm join 10.10.121.222:6443 --token b0f7b8.8d1767876297d85c --discovery-token-ca-cert-hash sha256:17ccb41872fb3a405df498b3d10acdd2fc47787ee541b58f87e8e71933134c65
-
 
 kubeadm join 10.10.121.222:6443 --token b0f7b8.8d1767876297d85c --discovery-token-ca-cert-hash sha256:90bec7aa30b4b0fe5709bbb2cc46f49fa356b18eb381e52726b89d2ea59358b1
 
-
-
-
 kubeadm join 10.10.121.222:6443 --token b0f7b8.8d1767876297d85c --discovery-token-ca-cert-hash sha256:bdc0c2d38048641916d9b49bc5795eaa9129ebe704722c23832c9d8edb147a1c
-
+```
 
 
 
