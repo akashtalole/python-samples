@@ -597,3 +597,14 @@ kubeadm join 10.10.121.222:6443 --token b0f7b8.8d1767876297d85c --discovery-toke
 https://www.server-world.info/en/note?os=CentOS_7&p=kubernetes
 https://www.server-world.info/en/note?os=CentOS_7&p=kubernetes&f=3
 https://www.server-world.info/en/note?os=CentOS_7&p=docker&f=1
+
+1. What is Kubernetes?
+
+- Kubernetes is an open-source container management tool which holds the responsibilities of container deployment, scaling & descaling of containers & load balancing. 
+- Being the Google’s brainchild, it offers excellent community and works brilliantly with all the cloud providers. So, we can say that Kubernetes is not a containerization platform, but it is a multi-container management solution.
+
+2. How is Kubernetes related to Docker?
+
+- It’s a known fact that Docker provides the lifecycle management of containers and a Docker image builds the runtime containers. 
+- But, since these individual containers have to communicate, Kubernetes is used.  So, Docker builds the containers and these containers communicate with each other via Kubernetes. 
+- So, containers running on multiple hosts can be manually linked and orchestrated using Kubernetes.
