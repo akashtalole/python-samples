@@ -18,14 +18,23 @@
 - Cross-site scripting works by manipulating a vulnerable web site so that it returns malicious JavaScript to users. 
 - When the malicious code executes inside a victim's browser, the attacker can fully compromise their interaction with the application.
 
-4. What is SQL injection (SQLi)?
+4. What are the types of XSS attacks?
+
+There are three main types of XSS attacks. These are:
+
+* Reflected XSS, where the malicious script comes from the current HTTP request.
+* Stored XSS, where the malicious script comes from the website's database.
+* DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.
+
+
+5. What is SQL injection (SQLi)?
 
 - SQL injection is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. 
 - It generally allows an attacker to view data that they are not normally able to retrieve. This might include data belonging to other users, or any other data that the application itself is able to access. 
 - In many cases, an attacker can modify or delete this data, causing persistent changes to the application's content or behavior.
 - In some situations, an attacker can escalate an SQL injection attack to compromise the underlying server or other back-end infrastructure, or perform a denial-of-service attack.
 
-5. What is CSRF?
+6. What is CSRF?
 
 - Cross-site request forgery (also known as CSRF) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. 
 - It allows an attacker to partly circumvent the same origin policy, which is designed to prevent different websites from interfering with each other.
@@ -42,3 +51,5 @@ A7:2017 - Cross-Site Scripting (XSS)
 A8:2017 - Insecure Deserialization
 A9:2017 - Using Components with Known Vulnerabilities 
 A10:2017 - Insufficient Logging & Monitoring
+
+
