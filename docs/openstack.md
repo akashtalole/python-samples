@@ -205,6 +205,7 @@ Networks
 Routers
 Subnets
 Ports Vendor Plugins
+
 16. Define Hypervisor
 For all cloud computing paltforms, Hypervisor is a term to define virtual machine monitor (VMM) including hardware, software and firmware components running on a virtual machine. Host machine is the one having hypervisor with one or more virtual machines.
 OpenStack Compute allows multiple hypervisors. There are functionalities to choose one among them for a specific purpose.
@@ -216,12 +217,14 @@ QEMU: Quick EMUlator used for development purposes
 UML: User Mode Linux used for development purposes
 VMware vSphere: VMware-based Linux and Windows via vCenter server connection.
 Hyper-V: Server virtualization with Microsoft’s Hyper-V
+
 18. Explain in brief the modular architecture of OpenStack.
 The three important components of OpenStack modular architecture are:
 
 OpenStack Compute: For managing large networks on the virtual machine
 Image Service: The delivery service provides discovery and registration for virtual disk images
 OpenStack Object Storage: A storage system that provides support for both block storage and object storage
+
 19. What command manages floating IP addresses in OpenStack
 nova floating-ip-*
 
@@ -231,12 +234,13 @@ Bare-metal node grants access to control bare-metal driver that handles the prov
 21. List down the components of OpenStack Compute
 Nova (Compute) Cloud comprises following components:
 
-API server
-Message Queue (Rabbit-MQ Server)
-Compute Workers (Nova-Compute)
-Network controller (Nova-Network)
-Volume Worker
-Scheduler
+- API server
+- Message Queue (Rabbit-MQ Server)
+- Compute Workers (Nova-Compute)
+- Network controller (Nova-Network)
+- Volume Worker
+- Scheduler
+
 22. Define the role of API Server.
 It provides an interface for the external world to interact with the cloud infrastructure.
 
