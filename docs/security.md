@@ -1,5 +1,18 @@
 ## Security
 
+## OWASP Top 10 2017
+
+A1:2017 - Injection 
+A2:2017 - Broken Authentication
+A3:2017 - Sensitive Data Exposure 
+A4:2017 - XML External Entities (XXE)
+A5:2017 - Broken Access Control
+A6:2017 - Security Misconfiguration
+A7:2017 - Cross-Site Scripting (XSS)
+A8:2017 - Insecure Deserialization
+A9:2017 - Using Components with Known Vulnerabilities 
+A10:2017 - Insufficient Logging & Monitoring
+
 1. What is directory traversal?
 
 - Directory traversal (also known as file path traversal) is a web security vulnerability that allows an attacker to read arbitrary files on the server that is running an application. 
@@ -39,17 +52,11 @@ There are three main types of XSS attacks. These are:
 - Cross-site request forgery (also known as CSRF) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. 
 - It allows an attacker to partly circumvent the same origin policy, which is designed to prevent different websites from interfering with each other.
 
-## OWASP Top 10 2017
+7. What is clickjacking?
 
-A1:2017 - Injection 
-A2:2017 - Broken Authentication
-A3:2017 - Sensitive Data Exposure 
-A4:2017 - XML External Entities (XXE)
-A5:2017 - Broken Access Control
-A6:2017 - Security Misconfiguration
-A7:2017 - Cross-Site Scripting (XSS)
-A8:2017 - Insecure Deserialization
-A9:2017 - Using Components with Known Vulnerabilities 
-A10:2017 - Insufficient Logging & Monitoring
+Clickjacking is an interface-based attack in which a user is tricked into clicking on actionable content on a hidden website by clicking on some other content in a decoy website. Consider the following example:
+
+A web user accesses a decoy website (perhaps this is a link provided by an email) and clicks on a button to win a prize. Unknowingly, they have been deceived by an attacker into pressing an alternative hidden button and this results in the payment of an account on another site. This is an example of a clickjacking attack. The technique depends upon the incorporation of an invisible, actionable web page (or multiple pages) containing a button or hidden link, say, within an iframe. The iframe is overlaid on top of the user's anticipated decoy web page content. This attack differs from a CSRF attack in that the user is required to perform an action such as a button click whereas a CSRF attack depends upon forging an entire request without the user's knowledge or input.
+
 
 

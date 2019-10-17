@@ -260,3 +260,45 @@ By using the command sudo nova-manage user create user-name
 
 27. Can we see the list of roles and associated IDs in OpenStack environment?
 Yes, by using keystone role-list
+
+https://assafmuller.com/2015/04/15/distributed-virtual-routing-overview-and-eastwest-routing/
+https://assafmuller.com/2014/05/02/introduction-to-neutron/
+https://assafmuller.files.wordpress.com/2014/05/neutron.pdf
+
+## OVS vs Linux Bridge: What Are They?
+
+- OVS
+Open vSwitch (OVS) is an open source multilayer virtual switch. It usually operates as a software-based network switch or as the control stack for dedicated switching hardware. Designed to enable effective network automation via programmatic extensions, OVS also supports standard management interfaces and protocols, including NetFlow, sFlow, CLI, IPFIX, RSPAN, LACP, 802.1ag. In addition, Open vSwitch can support transparent distribution across multiple physical servers. This function is similar to the proprietary virtual switch solutions such as the VMware vSphere Distributed Switch (vDS). In short, OVS is used with hypervisors to interconnect virtual machines within a host and virtual machines between different hosts across networks.
+
+- Linux Bridge
+As mentioned above, the Open vSwitch is a multilayer virtual switch, which can work as a Layer 2 or Layer 3 switch. While the Linux bridge only behaves like a Layer 2 switch. Usually, Linux bridge is placed between two separate groups of computers that communicate with each other, but it communicates much more with one of the computer groups. It consists of four major components, including a set of network ports, a control plane, a forwarding plane, and MAS learning database. With these components, Linux bridge can be used for forwarding packets on routers, on gateways, or between VMs and network namespaces on a host. What’s more, it also supports STP, VLAN filter, and multicast snooping.
+
+
+## OVS vs Linux Bridge: Advantages And Disadvantages of OVS
+
+* Compared to Linux Bridge, there are several advantages of Open vSwitch:
+
+Easier for network management – With the Open vSwitch, it is convenient for the administrator to manage and monitor the network status and data flow in the cloud environment.
+Support more tunnel protocols – OVS supports GRE, VXLAN, IPsec, etc. However, Linux Bridge only supports GRE tunnel.
+Incorporated in SDN – Open vSwitch is incorporated in software-defined networking (SDN) that it can be driven by using an OpenStack plug-in or directly from an SDN Controller, such as OpenDaylight.
+
+* Despite these advantages, Open vSwitch have some challenges:
+
+Lacks stability – Open vSwitch has some stability problems such as Kernetl panics, ovs-switched segfaults, and data corruption.
+Complex operation – Open vSwitch itself is a complex solution, which owns so many functions. It is hard to learn, install and operate.
+OVS vs Linux Bridge: Strengths And Limitations of Linux Bridge
+
+* Linux Bridge is still popular mainly for the following reasons:
+
+Stable and reliable – Linux Bridge has been used for years, its stability and reliability are approved.
+Easy for installation – Linux Bridge is a part of standard Linux installation and there are no additional packages to install or learn.
+Convenient for troubleshooting – Linux Bridge itself is a simple solution that its operation is simpler than that of Open vSwitch. It is convenient for troubleshooting.
+
+* However, there are some limitations:
+
+Fewer functions – Linux Bridge doesn’t support the Neutron DVR, the newer and more scalable VXLAN model, and some other functions.
+Fewer supporters – Many enterprises wanted to ensure that there was an open model for integrating their services into OpenStack. However, Linux Bridge can’t ensure the demand, so it has fewer users than that of Open vSwitch.
+
+* OVS vs Linux Bridge: Who’s the Winner?
+OVS vs Linux Bridge: who’s the winner? Actually, both of them are good network solutions and each has its appropriate usage scenarios. OVS has more functions in centralized management and control. Linux Bridge has good stability that is suitable for Large-scale network deployments. All in all, The winner is the right one that meets your demands.
+
